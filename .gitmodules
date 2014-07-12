@@ -1,0 +1,3 @@
+[submodule "rprog/week2"]
+	path = rprog/week2
+	url = git@github.com:Sardtok/ProgrammingAssignment2.git
