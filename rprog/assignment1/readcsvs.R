@@ -4,6 +4,6 @@ readCSVs <- function(directory, ids) {
     directory <- paste(directory, "/", sep="")
   }
   
-  files <- paste(directory, dir(path=directory, pattern="*.csv")[ids], sep="")
+  files <- paste(directory, dir(path=directory, pattern="*.csv"), sep="")[ids]
   lapply(files, read.csv)
 }
