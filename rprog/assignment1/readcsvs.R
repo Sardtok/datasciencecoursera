@@ -1,5 +1,3 @@
-library(data.table)
-
 readCSVs <- function(directory, ids) {
   dirlen <- nchar(directory)
   if (substr(directory, dirlen, dirlen) != "/") {
@@ -7,5 +5,5 @@ readCSVs <- function(directory, ids) {
   }
   
   files <- paste(directory, dir(path=directory, pattern="*.csv")[ids], sep="")
-  rbindlist(lapply(files, read.csv))
+  lapply(files, read.csv)
 }
