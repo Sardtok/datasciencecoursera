@@ -7,5 +7,5 @@ readCSVs <- function(directory, ids) {
   }
   
   files <- paste(directory, dir(directory, "*.csv")[ids], sep="")
-  lapply(files, read.csv)
+  rbindlist(lapply(files, read.csv))
 }
