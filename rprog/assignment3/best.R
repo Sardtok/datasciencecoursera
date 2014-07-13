@@ -12,14 +12,14 @@ make.best <- function() {
       stop("invalid state")
     }
     
-    if (match(outcome, types, nomatch=FALSE)) {
+    if (!match(outcome, names(types), nomatch=FALSE)) {
       stop("invalid outcome")
     }
     
     outcome <- types[outcome]
     
-    data <- data[,c(outcome, "Hospital.Name")]
-    data[order(data)[1],2]
+    data <- data[!is.na(data[,c[outcome]]),c(outcome, "Hospital.Name")]
+    data[order(data[,1], data[,2])[1],2]
   }
 }
 
