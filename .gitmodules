@@ -1,3 +1,6 @@
 [submodule "rprog/week2"]
 	path = rprog/assignment2
 	url = git@github.com:Sardtok/ProgrammingAssignment2.git
+[submodule "getdata/project"]
+	path = getdata/project
+	url = git@github.com:Sardtok/getdata-assignment.git
